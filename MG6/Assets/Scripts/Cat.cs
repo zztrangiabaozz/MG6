@@ -64,7 +64,16 @@ public class Cat : MonoBehaviour
         //      collider.
         // You might want to check the Rigidbody2D scripting documentation
         //      for a useful variable :)
-        
+        if (_rigidbody.linearVelocity.y > 0)
+        {
+    // Disable the player's collider
+        _collider.enabled = false;
+        }
+        else
+        {
+    // Enable the player's collider again
+        _collider.enabled = true;
+        }
 
         
         // STEP 1 -------------------------------------------------------------
